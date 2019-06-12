@@ -1,0 +1,73 @@
+CMD :
+-------------------------------------------------------------------
+-doskey : untuk inisialisasi shorthand pada command prompt
+-dir	: untuk melihat isi directory
+-cls	: clear list pada command prompt
+
+GIT BASH:
+-alias 	: untuk ninisialisasi shorthand pada git bash
+-ls	: melihat list isi directory
+-clear  : mengososngkan git bash
+
+GIT :
+-------------------------------------------------------------------
+git 				: untuk memanggil perintah git
+git config --list		: list configurasi git (cara keluar tekan :q )
+git config --local		: configurasi untuk repository yang sedang diremote saat ini dengan akun yang sedang terkait
+git config --global		: configurasi untuk keseluruhan remote repository github dengan akun yang sedang terkait
+git config --global user.name "nama" : salah satu contoh pengisian configurasi
+
+git add . 			: menambbahkan item pada stage area
+git add -A			: sama
+
+git commit -m "definisi commit" : memindah item yang berada pada stage area ke Head
+git commit -a -m"definisi commt": fungsi commit tanpa add
+git commit -am "definisi commit": sama
+
+git branch			: melihat list branch dan branch yg aktif
+git branch --merged		: check branch yang telah dimerged (langkah aman sebelum hapus branch)
+git branch -d namabranch	: menghapus branch (sesudah di merge)
+git brandh -D namabranch	: menghapus branch secara paksa (sebelum dimerge)
+git merge namabranch		: untuk menggabungkan branch
+
+git log				: melihat history commit dan juga user yang commit
+git log --oneline		: melihat history hanya dengan satu baris.
+git log --all --decorate --oneline --graph : melihat visualisasi hirarky branch dan commit
+
+git clone urlrepo		: untuk mendownload repository
+git remote 			: melihat list remote 
+git remote -v			: melihat list detile remote
+git push			: mengunggah repo local ke repo github
+
+
+SHORTHAND :
+-------------------------------------------------------------------
+doskey graph=git log --all --decorate --oneline --graph
+doskey ls=dir
+doskey cls=clear
+
+DESKRIPSI :
+jenis -jenis merge :
+-Fast Forward 
+ menggabungkan branch yang mempunyai direct path atau hubungan langsung dengan branch yang akan di merge
+ contohnya branch master sebagai head dan branch guru yang artinya branch master akan di gabungkan kedalam 
+ branch dosen.
+-Three way merge
+ menggabungkan branch yang tidak mempunyai direct path contohnya branch master yang telah di merge ke branch
+ dosen maka direct pathnya terputus dengan branch staff maka ketika di merge maka akan membuat commit baru
+ dengan nama diefault "Merge branch 'namabranch' "
+ 
+ hasil akhir visual pada cmd setelah mengalami penghapusan 
+
+ * 09cs09d0 (HEAD-> master) Merge branch 'staff'
+ |\
+ | * d98f9e7r menambahkan file staff.html
+ * | 93nfk393 menambahkan file dosen.html
+ |/ 
+ * 9c9w94c6 menambahkan table mahasiswa dan menambahk framwork mdb
+ * commit pertama
+
+
+kedua jenis merge tersebut mempunyai perintah yang sama dan efek yang sama namun mengalami proses yang 
+berbeda dibalik layar.
+ 
